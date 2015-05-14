@@ -1,0 +1,18 @@
+# CentOS-OpenStack-Kilo.repo
+#
+# Please see http://wiki.centos.org/SpecialInterestGroup/Cloud for more
+# information
+
+[centos-openstack-kilo]
+name=CentOS-$releasever - OpenStack Kilo
+baseurl=http://mirror.centos.org/centos/$releasever/openstack-kilo/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
+
+[centos-openstack-kilo-test]
+name=CentOS-$releasever - OpenStack Kilo Testing
+baseurl=http://buildlogs.centos.org/centos/$releasever/cloud/openstack-kilo/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
