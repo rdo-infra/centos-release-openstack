@@ -4,7 +4,7 @@ Version: kilo
 Release: 1%{?dist}
 License: GPL
 URL: http://wiki.centos.org/SpecialInterestGroup/Cloud
-Source0: CentOS-OpenStack-Kilo.repo
+Source0: CentOS-OpenStack.repo
 Source1: RPM-GPG-KEY-CentOS-SIG-Cloud
 
 BuildArch: noarch
@@ -17,8 +17,8 @@ yum Configs and basic docs for OpenStack as delivered via the CentOS Cloud SIG.
 %prep
 
 %install
-install -p -d %{buildroot}%{_sysconfdir}/yum.repos.d
-install -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d
+install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-OpenStack-%{version}.repo
+sed -i -e "s/OPENSTACK_VERSION/%{version}/g" %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-OpenStack-%{version}.repo
 install -p -d %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 
