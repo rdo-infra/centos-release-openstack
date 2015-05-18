@@ -4,14 +4,14 @@
 # information
 
 [centos-openstack-OPENSTACK_VERSION]
-name=CentOS-$releasever - OpenStack Kilo
+name=CentOS-$releasever - OpenStack OPENSTACK_VERSION
 baseurl=http://mirror.centos.org/centos/$releasever/openstack-OPENSTACK_VERSION/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 
 [centos-openstack-OPENSTACK_VERSION-test]
-name=CentOS-$releasever - OpenStack Kilo Testing
+name=CentOS-$releasever - OpenStack OPENSTACK_VERSION Testing
 baseurl=http://buildlogs.centos.org/centos/$releasever/cloud/openstack-OPENSTACK_VERSION/$basearch/
 gpgcheck=1
 enabled=0
