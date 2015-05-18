@@ -28,5 +28,5 @@ install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
-* Thu May 14 2015 Alan Pevec <apevec@redhat.com> kilo-1
+* Thu May 14 2015 Alan Pevec <apevec@redhat.com> %{version}-1
 - Initial version based on centos-release-gluster
