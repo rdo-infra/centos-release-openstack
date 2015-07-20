@@ -1,6 +1,7 @@
+Openstackversion : kilo
 Summary: OpenStack from the CentOS Cloud SIG repo configs
-Name: centos-release-openstack
-Version: kilo
+Name: centos-release-openstack-%{Openstackversion}
+Version: 1.0
 Release: 2%{?dist}
 License: GPL
 URL: http://wiki.centos.org/SpecialInterestGroup/Cloud
