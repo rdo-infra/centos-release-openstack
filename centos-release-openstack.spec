@@ -2,7 +2,7 @@
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
 Version: 1
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPL
 URL: http://wiki.centos.org/SpecialInterestGroup/Cloud
 Source0: CentOS-OpenStack.repo
@@ -11,8 +11,7 @@ Source1: RPM-GPG-KEY-CentOS-SIG-Cloud
 BuildArch: noarch
 
 Requires: centos-release
-Provides: centos-release-openstack = %{OpenStackVersion}
-Obsoletes: centos-release-openstack < kilo-3
+Conflicts: centos-release-openstack
 
 %description
 yum Configs and basic docs for OpenStack as delivered via the CentOS Cloud SIG.
@@ -31,5 +30,5 @@ install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
-* Thu Oct 15 2015 Alan Pevec <apevec@redhat.com> %{OpenStackVersion}-1-2
+* Thu Oct 15 2015 Alan Pevec <apevec@redhat.com> %{OpenStackVersion}-1-3
 - %{OpenStackVersion} release
