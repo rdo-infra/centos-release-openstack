@@ -12,7 +12,7 @@ BuildArch: noarch
 
 Requires: centos-release
 Provides: centos-release-openstack = %{OpenStackVersion}
-Obsoletes: centos-release-openstack < %{OpenStackVersion}-3
+Obsoletes: centos-release-openstack < kilo-3
 
 %description
 yum Configs and basic docs for OpenStack as delivered via the CentOS Cloud SIG.
