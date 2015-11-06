@@ -15,3 +15,17 @@ name=CentOS-7 - OpenStack OPENSTACK_VERSION Testing
 baseurl=http://buildlogs.centos.org/centos/7/cloud/$basearch/openstack-OPENSTACK_VERSION/
 gpgcheck=0
 enabled=0
+
+[centos-openstack-OPENSTACK_VERSION-debuginfo]
+name=CentOS-7 - OpenStack OPENSTACK_VERSION - Debug
+baseurl=http://debuginfo.centos.org/centos/7/cloud/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
+
+[centos-openstack-OPENSTACK_VERSION-source]
+name=CentOS-7 - OpenStack OPENSTACK_VERSION - Source
+baseurl=http://vault.centos.org/centos/7/cloud/Source/openstack-OPENSTACK_VERSION/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
