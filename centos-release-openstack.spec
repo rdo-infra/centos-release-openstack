@@ -11,6 +11,8 @@ Source1: RPM-GPG-KEY-CentOS-SIG-Cloud
 BuildArch: noarch
 
 Requires: centos-release
+Requires: centos-release-ceph
+Requires: centos-release-qemu-ev
 Conflicts: centos-release-openstack
 
 %description
