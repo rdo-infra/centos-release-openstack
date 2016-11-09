@@ -1,3 +1,5 @@
-# UUID                                  	Group Name
-#
-ed1a478716d7a2d217f2c12b371f2c230fbee6f1	rdo-infra/centos-release-openstack-ptl
+# UUID          Group Name
+False 	Non-Interactive Users
+39dd1e48ad94a6289b88b5b021f99a274ab397d7       	rdo-infra/centos-release-openstack-core
+ed1a478716d7a2d217f2c12b371f2c230fbee6f1        	rdo-infra/centos-release-openstack-ptl
+global:Registered-Users		Registered Users
