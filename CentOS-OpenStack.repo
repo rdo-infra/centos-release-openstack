@@ -32,6 +32,6 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 
 [rdo-trunk-OPENSTACK_VERSION-tested]
 name=OpenStack OPENSTACK_VERSION Trunk Tested
-baseurl=http://buildlogs.centos.org/centos/7/cloud/$basearch/rdo-trunk-OPENSTACK_VERSION-tested/
+baseurl=https://trunk.rdoproject.org/centos7-OPENSTACK_VERSION/current-passed-ci/
 gpgcheck=0
 enabled=0
