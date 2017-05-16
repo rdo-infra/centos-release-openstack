@@ -36,6 +36,6 @@ exclude=sip,PyQt4
 
 [rdo-trunk-OPENSTACK_VERSION-tested]
 name=OpenStack OPENSTACK_VERSION Trunk Tested
-baseurl=https://trunk.rdoproject.org/centos-OPENSTACK_VERSION/current-passed-ci/
+baseurl=https://trunk.rdoproject.org/centos7-OPENSTACK_VERSION/current-passed-ci/
 gpgcheck=0
 enabled=0
