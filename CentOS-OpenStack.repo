@@ -5,9 +5,9 @@
 
 [centos-openstack-OPENSTACK_VERSION]
 name=CentOS-7 - OpenStack OPENSTACK_VERSION
-baseurl=http://mirror.centos.org/centos/7/cloud/$basearch/openstack-OPENSTACK_VERSION/
+baseurl=BASE_RELEASE_MIRROR_URL/cloud/$basearch/openstack-OPENSTACK_VERSION/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 exclude=sip,PyQt4
 
@@ -15,7 +15,7 @@ exclude=sip,PyQt4
 name=CentOS-7 - OpenStack OPENSTACK_VERSION Testing
 baseurl=https://buildlogs.centos.org/centos/7/cloud/$basearch/openstack-OPENSTACK_VERSION/
 gpgcheck=0
-enabled=0
+enabled=1
 exclude=sip,PyQt4
 
 [centos-openstack-OPENSTACK_VERSION-debuginfo]
