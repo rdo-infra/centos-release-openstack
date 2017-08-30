@@ -13,7 +13,7 @@ exclude=sip,PyQt4
 
 [centos-openstack-OPENSTACK_VERSION-test]
 name=CentOS-7 - OpenStack OPENSTACK_VERSION Testing
-baseurl=http://buildlogs.centos.org/centos/7/cloud/$basearch/openstack-OPENSTACK_VERSION/
+baseurl=https://buildlogs.centos.org/centos/7/cloud/$basearch/openstack-OPENSTACK_VERSION/
 gpgcheck=0
 enabled=0
 exclude=sip,PyQt4
