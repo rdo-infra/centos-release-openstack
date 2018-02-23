@@ -1,4 +1,4 @@
-%global OpenStackVersion pike
+%global OpenStackVersion queens
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
 Version: 1
@@ -11,7 +11,7 @@ Source1: RPM-GPG-KEY-CentOS-SIG-Cloud
 ExclusiveArch:  x86_64 aarch64 ppc64le
 
 Requires: centos-release
-Requires: centos-release-ceph-jewel
+Requires: centos-release-ceph-luminous
 Requires: centos-release-qemu-ev
 Conflicts: centos-release-openstack
 
@@ -37,8 +37,5 @@ install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
-* Thu Aug 31 2017 Alan Pevec <apevec AT redhat.com> %{OpenStackVersion}-1
-- %{OpenStackVersion} release
-
-* Wed Aug 30 2017 David Moreau Simard <dmsimard AT redhat.com> %{OpenStackVersion}-0
-- %{OpenStackVersion} testing
+* Tue Feb 27 2018 Alfredo Moralejo <amoralej AT redhat.com> %{OpenStackVersion}-1-1
+- %{OpenStackVersion} releases
