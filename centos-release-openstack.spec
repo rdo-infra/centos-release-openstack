@@ -1,8 +1,8 @@
-%global OpenStackVersion queens
+%global OpenStackVersion rocky
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
 Version: 1
-Release: 2%{?dist}
+Release: 1%{?dist}
 License: GPL
 URL: http://wiki.centos.org/SpecialInterestGroup/Cloud
 Source0: CentOS-OpenStack.repo
@@ -32,8 +32,6 @@ install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
-* Thu Aug 8 2018 Adam Kimball <baha@linux.vnet.ibm.com> %{OpenStackVersion}-1-2
-- use contentdir and releasever yum variables
+* Wed Aug 29 2018 hguemar <hguemar@nozarashi.seireitei> - %{OpenStackVersion}-1-1
+- Rocky release
 
-* Tue Feb 27 2018 Alfredo Moralejo <amoralej AT redhat.com> %{OpenStackVersion}-1-1
-- %{OpenStackVersion} releases
