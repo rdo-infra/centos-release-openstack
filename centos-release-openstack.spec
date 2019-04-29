@@ -1,4 +1,4 @@
-%global OpenStackVersion rocky
+%global OpenStackVersion stein
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
 Version: 1
@@ -11,7 +11,7 @@ Source1: RPM-GPG-KEY-CentOS-SIG-Cloud
 BuildArch: noarch
 
 Requires: centos-release
-Requires: centos-release-ceph-luminous
+Requires: centos-release-ceph-nautilus
 Requires: centos-release-qemu-ev
 Conflicts: centos-release-openstack
 
@@ -32,6 +32,6 @@ install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
-* Wed Aug 29 2018 hguemar <hguemar@nozarashi.seireitei> - %{OpenStackVersion}-1-1
-- Rocky release
+* Mon Apr 29 2019 amoralej <amoralej@redhat.com> - %{OpenStackVersion}-1-1
+- Stein release
 
