@@ -1,4 +1,4 @@
-%global OpenStackVersion stein
+%global OpenStackVersion train
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
 Version: 1
@@ -32,6 +32,6 @@ install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
-* Mon Apr 29 2019 amoralej <amoralej@redhat.com> - %{OpenStackVersion}-1-1
-- Stein release
+* Tue Oct 15 2019 Yatin Karel <ykarel@redhat.com> - %{OpenStackVersion}-1-1
+- Train release
 
