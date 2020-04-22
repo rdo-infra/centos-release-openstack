@@ -4,7 +4,7 @@
 # information
 
 [centos-openstack-OPENSTACK_VERSION]
-name=CentOS-7 - OpenStack OPENSTACK_VERSION
+name=CentOS- $releasever - OpenStack OPENSTACK_VERSION
 #baseurl=http://mirror.centos.org/$contentdir/$releasever/cloud/$basearch/openstack-OPENSTACK_VERSION/
 mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=cloud-openstack-OPENSTACK_VERSION
 gpgcheck=1
@@ -13,23 +13,23 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 exclude=sip,PyQt4
 
 [centos-openstack-OPENSTACK_VERSION-test]
-name=CentOS-7 - OpenStack OPENSTACK_VERSION Testing
-baseurl=https://buildlogs.centos.org/centos/7/cloud/$basearch/openstack-OPENSTACK_VERSION/
+name=CentOS- $releasever - OpenStack OPENSTACK_VERSION Testing
+baseurl=https://buildlogs.centos.org/centos/$releasever/cloud/$basearch/openstack-OPENSTACK_VERSION/
 gpgcheck=0
 enabled=0
 exclude=sip,PyQt4
 
 [centos-openstack-OPENSTACK_VERSION-debuginfo]
-name=CentOS-7 - OpenStack OPENSTACK_VERSION - Debug
-baseurl=http://debuginfo.centos.org/centos/7/cloud/$basearch/
+name=CentOS-$releasever - OpenStack OPENSTACK_VERSION - Debug
+baseurl=http://debuginfo.centos.org/centos/$releasever/cloud/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 exclude=sip,PyQt4
 
 [centos-openstack-OPENSTACK_VERSION-source]
-name=CentOS-7 - OpenStack OPENSTACK_VERSION - Source
-baseurl=http://vault.centos.org/centos/7/cloud/Source/openstack-OPENSTACK_VERSION/
+name=CentOS-$releasever - OpenStack OPENSTACK_VERSION - Source
+baseurl=http://vault.centos.org/centos/$releasever/cloud/Source/openstack-OPENSTACK_VERSION/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
@@ -37,6 +37,6 @@ exclude=sip,PyQt4
 
 [rdo-trunk-OPENSTACK_VERSION-tested]
 name=OpenStack OPENSTACK_VERSION Trunk Tested
-baseurl=https://trunk.rdoproject.org/centos7-OPENSTACK_VERSION/current-passed-ci/
+baseurl=https://trunk.rdoproject.org/centos$releasever-OPENSTACK_VERSION/current-passed-ci/
 gpgcheck=0
 enabled=0
