@@ -1,7 +1,7 @@
-%global OpenStackVersion train
+%global OpenStackVersion ussuri
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
-Version: 2
+Version: 1
 Release: 1%{?dist}
 License: GPL
 URL: http://wiki.centos.org/SpecialInterestGroup/Cloud
@@ -46,6 +46,9 @@ install -p -m 644 %{SOURCE4} %{buildroot}%{_sysconfdir}/yum.repos.d
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
+* Mon May 18 2020 Yatin Karel <ykarel@redhat.com> - %{OpenStackVersion}-1-1
+- Ussuri release
+
 * Wed Apr 22 2020 Alfredo Moralejo <amoralej@redhat.com> - %{OpenStackVersion}-2-1
 - Add support for CentOS 8
 
