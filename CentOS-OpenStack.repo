@@ -11,6 +11,7 @@ gpgcheck=1
 enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 exclude=sip,PyQt4
+module_hotfixes=1
 
 [centos-openstack-OPENSTACK_VERSION-test]
 name=CentOS- $releasever - OpenStack OPENSTACK_VERSION Testing
@@ -18,6 +19,7 @@ baseurl=https://buildlogs.centos.org/centos/$releasever/cloud/$basearch/openstac
 gpgcheck=0
 enabled=0
 exclude=sip,PyQt4
+module_hotfixes=1
 
 [centos-openstack-OPENSTACK_VERSION-debuginfo]
 name=CentOS-$releasever - OpenStack OPENSTACK_VERSION - Debug
@@ -26,6 +28,7 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 exclude=sip,PyQt4
+module_hotfixes=1
 
 [centos-openstack-OPENSTACK_VERSION-source]
 name=CentOS-$releasever - OpenStack OPENSTACK_VERSION - Source
@@ -34,9 +37,11 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud
 exclude=sip,PyQt4
+module_hotfixes=1
 
 [rdo-trunk-OPENSTACK_VERSION-tested]
 name=OpenStack OPENSTACK_VERSION Trunk Tested
 baseurl=https://trunk.rdoproject.org/centos$releasever-OPENSTACK_VERSION/current-passed-ci/
 gpgcheck=0
 enabled=0
+module_hotfixes=1
