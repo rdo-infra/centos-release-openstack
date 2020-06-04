@@ -2,20 +2,19 @@
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
 Version: 1
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL
 URL: http://wiki.centos.org/SpecialInterestGroup/Cloud
 Source0: CentOS-OpenStack.repo
 Source1: RPM-GPG-KEY-CentOS-SIG-Cloud
 Source2: RPM-GPG-KEY-CentOS-SIG-Virtualization-RDO
 Source3: advanced-virtualization.repo
-Source4: ceph-nautilus.repo
 
 BuildArch: noarch
 
 Requires: centos-release
 Requires: centos-release-rabbitmq-38
-Requires: centos-release-storage-common
+Requires: centos-release-ceph-nautilus
 Conflicts: centos-release-openstack
 
 %description
@@ -31,7 +30,6 @@ install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 
 install -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 install -p -m 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/yum.repos.d
-install -p -m 644 %{SOURCE4} %{buildroot}%{_sysconfdir}/yum.repos.d
 
 %files
 %defattr(-,root,root)
@@ -39,6 +37,9 @@ install -p -m 644 %{SOURCE4} %{buildroot}%{_sysconfdir}/yum.repos.d
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
+* Thu Jun 04 2020  - %{OpenStackVersion}-1-2
+- Rely on ceph nautilus release rpm instead of ceph repo
+
 * Mon May 18 2020 Yatin Karel <ykarel@redhat.com> - %{OpenStackVersion}-1-1
 - Ussuri release
 
