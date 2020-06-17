@@ -4,7 +4,7 @@
 # information
 
 [centos-openstack-OPENSTACK_VERSION]
-name=CentOS- $releasever - OpenStack OPENSTACK_VERSION
+name=CentOS-$releasever - OpenStack OPENSTACK_VERSION
 #baseurl=http://mirror.centos.org/$contentdir/$releasever/cloud/$basearch/openstack-OPENSTACK_VERSION/
 mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=cloud-openstack-OPENSTACK_VERSION
 gpgcheck=1
@@ -14,7 +14,7 @@ exclude=sip,PyQt4
 module_hotfixes=1
 
 [centos-openstack-OPENSTACK_VERSION-test]
-name=CentOS- $releasever - OpenStack OPENSTACK_VERSION Testing
+name=CentOS-$releasever - OpenStack OPENSTACK_VERSION Testing
 baseurl=https://buildlogs.centos.org/centos/$releasever/cloud/$basearch/openstack-OPENSTACK_VERSION/
 gpgcheck=0
 enabled=0
