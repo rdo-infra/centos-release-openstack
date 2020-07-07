@@ -2,7 +2,7 @@
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
 Version: 1
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPL
 URL: http://wiki.centos.org/SpecialInterestGroup/Cloud
 Source0: CentOS-OpenStack.repo
@@ -37,6 +37,9 @@ install -p -m 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/yum.repos.d
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
+* Tue Jul 07 2020 - Alfredo Moralejo amoralej@redhat.com> - 1-3
+- Replace rdo-trunk-ussuri-tested by component based promoted repos
+
 * Thu Jun 04 2020  - %{OpenStackVersion}-1-2
 - Rely on ceph nautilus release rpm instead of ceph repo
 
