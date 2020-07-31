@@ -2,17 +2,16 @@
 Summary: OpenStack from the CentOS Cloud SIG repo configs
 Name: centos-release-openstack-%{OpenStackVersion}
 Version: 1
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: GPL
 URL: http://wiki.centos.org/SpecialInterestGroup/Cloud
 Source0: CentOS-OpenStack.repo
 Source1: RPM-GPG-KEY-CentOS-SIG-Cloud
-Source2: RPM-GPG-KEY-CentOS-SIG-Virtualization-RDO
-Source3: advanced-virtualization.repo
 
 BuildArch: noarch
 
 Requires: centos-release
+Requires: centos-release-advanced-virtualization
 Requires: centos-release-rabbitmq-38
 Requires: centos-release-ceph-nautilus
 Conflicts: centos-release-openstack
@@ -28,15 +27,15 @@ sed -i -e "s/OPENSTACK_VERSION/%{OpenStackVersion}/g" %{buildroot}%{_sysconfdir}
 install -p -d %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 install -m 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
 
-install -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg
-install -p -m 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/yum.repos.d
-
 %files
 %defattr(-,root,root)
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 %{_sysconfdir}/pki/rpm-gpg
 
 %changelog
+* Fri Jul 31 2020 Yatin Karel <ykarel@redhat.com> - %{OpenStackVersion}-1-4
+- Rely on advirt release rpm
+
 * Tue Jul 07 2020 - Alfredo Moralejo amoralej@redhat.com> - %{OpenStackVersion}-1-3
 - Replace rdo-trunk-ussuri-tested by component based promoted repos
 
